@@ -46,7 +46,7 @@ jQuery(function ($) {
     $(".scroll").on("click", function (event) {
         event.preventDefault();
         $("html,body").animate({
-            scrollTop: $(this.hash).offset().top - 60}, 1200);
+            scrollTop: $(this.hash).offset().top - 60}, 200);
     });
 
     $(".slider-btn").on("click", function (event) {
@@ -160,16 +160,6 @@ jQuery(function ($) {
         });
     });
 
-    /* =====================================
-             Pricing Active
-   ===================================== */
-    $('.pricing-item').on('mouseenter' , function(){
-        $('.pricing-item').removeClass('active');
-        $(this).addClass('active');
-    }).on('mouseleave' , function(){
-        $('.pricing-item').removeClass('active');
-        $('.pricing-item.selected').addClass('active');
-    });
 
     /*===================================
         Go Top Scroll
@@ -309,7 +299,7 @@ jQuery(function ($) {
             mouseScrollReverse: "default",
             onHoverStop: "off",
             bullets: {
-                enable: true,
+                enable: false,
                 hide_onmobile: true,
                 hide_under: 769,
                 style: "agency",
